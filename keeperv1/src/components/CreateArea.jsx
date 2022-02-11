@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 function CreateArea(props) {
 
@@ -14,19 +14,23 @@ function CreateArea(props) {
             return {
                 ...prevNote, //...prevNote is the Spread Operator
                 [name]: value
-            }
-        })
+            };
+        });
     }
 
     function submitNote(event) {
-        props.onAdd(note)
+        props.onAdd(note);
+        setNote({
+            title: "",
+            content: ""
+        });
         event.preventDefault();
     }
 
     return (
         <div>
           <form>
-            <input name="title" placeholder="Title" />
+            <input name="title" value = {note.title} placeholder="Title" />
             <textarea name="content" placeholder="Take a note..." rows="3" />
             <button>Add</button>
           </form>
