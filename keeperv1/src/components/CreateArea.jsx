@@ -44,16 +44,16 @@ function CreateArea(props) {
        name = "title"
        onChange = {handleChange}
        value = {note.title}
-       placeholder = "Title"
+       placeholder = "Type of Meal"
        />
      )}
-     
+
         <textarea
           name="content"
           onChange={handleChange}
           onClick={expand}
           value={note.content}
-          placeholder="Take a note..."
+          placeholder="Contents"
           rows={isExpanded ? 3 : 1}
         />
         <Zoom in={isExpanded}> 

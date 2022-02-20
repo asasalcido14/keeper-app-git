@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <h1>
-      <LocalDiningIcon />Nutrition</h1>
+      <LocalDiningIcon />Nutrition Blog</h1>
     </header>
   );
 }
